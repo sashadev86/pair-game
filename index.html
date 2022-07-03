@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Игра в пары</title>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
   <div class="overlay"></div>
-    <header class="header">
 
-      <div class="container header__container">
-        <label  class="label">
-          <input type="number" id="input" name="input" min="2" max="10" step="1"> Введите количество пар
-        </label>
-        
-        <div class="count" id="countdown">
-            <h2 class="count__title">Осталось времени: <span class="display"> 60 </span> сек</h2>
-        </div>
-        <button class="begin">Начать Игру</button>
+  <canvas id="bubbles"></canvas>
+
+  <header class="header">
+    <div class="container header__container">
+      <label class="label">
+        <input id="input" name="input" type="number" min="2" max="10" step="1"> Введите количество пар
+      </label>
+
+      <div id="countdown" class="count">
+        <h2 class="count__title">Осталось времени: <span class="display"> 60 </span> сек</h2>
       </div>
-    </header>
-
-    <div class="container cards__container">
-        <button class="end">Сыграть еще раз</button>
+      <button class="begin">Начать Игру</button>
     </div>
+  </header>
+
+  <div class="container cards__container">
+    <button class="end">Сыграть еще раз</button>
+  </div>
 
 
-  <script defer src="js/main.js"></script>
+  <script src="http://atuin.ru/js/art/bubbles.js" type="text/javascript" defer></script>
+  <script src="js/main.js" defer></script>
+
 </body>
+
 </html>

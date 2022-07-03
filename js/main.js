@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // создание поля игры
-
   function createGameField(arr) {
     const field = document.querySelector(".cards__container");
     const list = document.createElement("ul");
@@ -169,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         cards.forEach((card) => card.classList.remove("open"));
 
-        alert("Поздравляю, Вы победили");
+        alert("Невероятно, Вы победили!");
         clearInterval(timer);
         endBtn.classList.add("active");
         document.querySelector('.overlay').style.display = "block";

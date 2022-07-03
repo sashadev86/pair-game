@@ -27,6 +27,22 @@ body {
   background: radial-gradient(circle, rgba(184,233,233,1) 0%, rgba(148,187,233,1) 100%);
 }
 
+#bubbles {
+  position: fixed;
+  z-index: -1; 
+  background:#477ab9;
+  width:100%;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  }
+
+#bubbles:hover { 
+  background:#3D689C;
+}
+
 .container {
   max-width: 1200px;
   padding: 0 25px;
@@ -35,7 +51,7 @@ body {
 
 .header {
   background: rgb(63,94,251);
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(255,0,243,1) 90%);
+  background: radial-gradient(circle, rgba(63,94,251,.7) 0%, rgba(255,0,243,.7) 90%);
   box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
@@ -45,6 +61,7 @@ body {
   justify-content: space-between;
   padding-top: 25px;
   padding-bottom: 25px;
+  z-index: 1;
 }
 
 .label {
