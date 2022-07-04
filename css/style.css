@@ -169,7 +169,6 @@ input::-webkit-inner-spin-button {
 
 .begin,
 .end {
-  display: inline-block;
   padding: 12px 30px;
   border-radius: 100px;
   font-size: 24px;
@@ -241,7 +240,7 @@ input::-webkit-inner-spin-button {
 .card__front,
 .card__back {
   width: 120px;
-  height: 172px;
+  height: 175px;
   overflow: hidden;
 }
 
@@ -296,9 +295,84 @@ input::-webkit-inner-spin-button {
   z-index: 5;
 }
 
-.radio__container {
-  position: fixed;
-  bottom: 50px;
+@media (max-width: 1200px) {
+
+  .header__controls {
+    flex-direction: column;
+  }
+
+  .label {
+    margin-bottom: 20px;
+  }
+
+  .count__title {
+    margin-bottom: 20px;
+  }
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .header__title {
+    font-size: 28px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .label__tippy {
+    padding-top: 0;
+  }
+
+  .label__tippy svg {
+    width: 30px;
+    height: 20px;
+  }
+
+  .label input {
+    width: 40px;
+    height: 30px;
+  }
+
+  .count__title {
+    font-size: 18px;
+  }
+
+  .begin, .end {
+    font-size: 18px;
+  }
+
+  .flip-container,
+  .card__front,
+  .card__back {
+    width: 60px;
+    height: 87px;
+    overflow: hidden;
+  }
+
+  .card__back {
+    font-size: 25px;
+    padding: 28px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flip-container,
+  .card__front,
+  .card__back {
+    width: 50px;
+    height: 77px;
+    overflow: hidden;
+  }
+
+  .card__back {
+    font-size: 24px;
+    padding: 25px 18px;
+  }
+}
+
 
 
