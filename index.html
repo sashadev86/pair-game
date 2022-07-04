@@ -18,14 +18,17 @@
 
   <header class="header">
     <div class="container header__container">
-      <label class="label">
-        <input id="input" name="input" type="number" min="2" max="10" step="1"> Введите количество пар
-      </label>
+      <h1 class="header__title">Игра в пары</h1>
+      <div class="header__controls">
+        <label class="label">
+          <input id="input" name="input" type="number" min="2" max="10" step="1"> Введите количество пар
+        </label>
 
-      <div id="countdown" class="count">
-        <h2 class="count__title">Осталось времени: <span class="display"> 60 </span> сек</h2>
+        <div id="countdown" class="count">
+          <h2 class="count__title">Осталось времени: <span class="display"> 60 </span> сек</h2>
+        </div>
+        <button class="begin">Начать Игру</button>
       </div>
-      <button class="begin">Начать Игру</button>
     </div>
   </header>
 
@@ -33,9 +36,9 @@
     <button class="end">Сыграть еще раз</button>
   </div>
 
-
   <script src="js/canvas.js" defer></script>
   <script src="js/main.js" defer></script>
 
 </body>
+
 </html>
