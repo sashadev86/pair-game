@@ -15,10 +15,12 @@ a {
 
 button {
   border: none;
+  background-color: transparent;
 }
 
 h1,
-h2 {
+h2,
+button {
   margin: 0;
   padding: 0;
 }
@@ -102,6 +104,60 @@ body {
 .label input:focus-visible {
   outline: none;
   outline: 2px solid #6868e4;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.label__tippy {
+  padding-top: 10px;
+}
+
+.tooltip-hidden {
+  display: none;
+}
+
+.tippy-box[data-animation='rotate'][data-state='hidden'] {
+  opacity: 0;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.tippy-box[data-theme~='violet'] {
+  background-color: #490742;
+  color: white;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  text-align: center;
+  border-radius: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.tippy-box[data-placement^=top]>.tippy-arrow {
+  color: #490742;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+
+.label__tippy svg {
+  width: 25px;
+  height: 25px;
+}
+
+.label__tippy svg .backg {
+  color: #8BB7F0;
+  transition: all .3s ease-in-out;
+}
+
+.label__tippy:hover svg .backg {
+  color: #c22cb1;
 }
 
 .count__title {
