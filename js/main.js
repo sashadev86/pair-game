@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function createGameField(arr) {
     const field = document.querySelector(".cards__container");
     const list = document.createElement("ul");
-
+    
     list.classList.add("cards__list");
     field.append(list);
 
@@ -144,7 +144,12 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   // кнопка начать игру
-  beginBtn.addEventListener("click", beginGame);
+  
+    beginBtn.addEventListener("click", () => {
+      if (!timer) {
+        beginGame()
+      }
+  });
 
   function compareCards() {
     let sumOfPairs = document.querySelectorAll(".flip-container").length;
