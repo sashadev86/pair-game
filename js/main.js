@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let numberArray = [];
+  let numberArray = []; // массив для хранения кол-ва карточек
 
+  // функция проверяет введённое игроком количество пар, возвращает массив с парными картами
   function getInputValue() {
     numberArray = [];
     let cardCount = input.value;
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return numberArray;
   }
 
+  // функция перемешивает карточки
   function shuffleArray(arr) {
     for (let c = arr.length - 1; c > 0; c--) {
       var b = Math.floor(Math.random() * (c + 1));
@@ -106,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
   }
 
+  // функция открытия карт 
   function openCard() {
     if (disabledCards) {
       return;
@@ -147,10 +150,13 @@ document.addEventListener("DOMContentLoaded", function () {
   
     beginBtn.addEventListener("click", () => {
       if (!timer) {
-        beginGame()
+        beginGame();
+      } else {
+        alert('Игра уже запущена');
       }
   });
 
+  // функция проверяет совпадение пар
   function compareCards() {
     let sumOfPairs = document.querySelectorAll(".flip-container").length;
 
@@ -169,6 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
+    // 
     if (count === sumOfPairs / 2) {
       setTimeout(function () {
         cards.forEach((card) => card.classList.remove("open"));
