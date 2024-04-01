@@ -1,2 +1,2 @@
 # pair-game
-https://banditos86.github.io/pair-game/
+https://sashadev86.github.io/pair-game/
